@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Untitled</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 </head>
 
 <body>
-    <h1>Michael Ayobami Omoyele Adams</h1>   
+    <h1 style="color:blue; text-align:center;">Michael Ayobami Omoyele Adams</h1>   
+    <button onclick="changeText()">Click me!</button>
+    <p id="demo">Hello World!</p>
+
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text has been changed!";
+    }
+    </script>
 
 </body>    
