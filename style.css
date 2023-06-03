@@ -1,0 +1,14 @@
+body {
+  background-color: #f4f4f4; /* a light grey */
+  color: #333; /* a dark grey */
+  font-family: Arial, sans-serif; /* use a standard sans-serif font */
+}
+
+.navbar {
+  background-color: #333; /* a dark grey */
+  color: #fff; /* white text */
+}
+
+.navbar a {
+  color: #fff; /* white links */
+}
