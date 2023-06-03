@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untitled</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Ayobami Omoyele Adams - Personal Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1 style="color:blue; text-align:center;">Michael Ayobami Omoyele Adams</h1>   
-    <button onclick="changeText()">Click me!</button>
-    <p id="demo">Hello World!</p>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Michael Adams</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#resume">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <script>
-        function changeText() {
-            document.getElementById("demo").innerHTML = "Text has been changed!";
-    }
-    </script>
+  <h1 style="color:blue; text-align:center;">Michael Ayobami Omoyele Adams</h1>
 
-</body>    
+  <button onclick="changeText()">Inspire me!</button>
+  <p id="demo">Click the button to get an inspirational quote!</p>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
