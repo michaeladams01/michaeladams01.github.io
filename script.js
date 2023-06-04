@@ -1,44 +1,26 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+function changeTextAndColor() {
+    var colors = ['#007bff', '#6c757d', '#28a745', '#dc3545', '#ffc107'];
+    var quotes = [
+      'The only way to do great work is to love what you do.',
+      'Believe you can and you’re halfway there.',
+      'Don’t wait. The time will never be just right.',
+      'Success is not the key to happiness. Happiness is the key to success.',
+      'Success usually comes to those who are too busy to be looking for it.'
+    ];
+    
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  
+    document.body.style.backgroundColor = randomColor;
+    document.getElementById('demo').innerText = randomQuote;
+  }
+
+  async function loadModel() {
+    const model = await tf.loadLayersModel('https://path-to-your-model/model.json');
+    return model;
   }
   
-  .navbar {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
+  async function predictDigit(model, imageData) {
+    const prediction = model.predict(imageData);
+    // Do something with the prediction...
   }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .navbar ul li {
-    margin-left: 15px;
-  }
-  
-  .navbar ul li a:hover {
-    color: #ddd;
-  }
-  
-  .section-home {
-    background-color: #f8f9fa;
-    padding: 20px;
-  }
-  
-  .section-inspire {
-    background-color: #e9ecef;
-    padding: 20px;
-  }
-  
