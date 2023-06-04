@@ -1,44 +1,40 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Michael Ayobami Omoyele Adams - Personal Page</title>  
+  <link rel="stylesheet" href="style.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+  <script src="js/model.js"></script> <!-- this is where your custom JavaScript will go -->
+</head>  
+
+<body>  
+  <header class="navbar">
+    <a class="navbar-brand" href="#">Michael Adams</a>  
+    <nav>
+      <ul class="navbar-nav">  
+        <li><a href="#home">Home</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-home">
+      <h1>Michael Ayobami Omoyele Adams</h1>  
+    </section>
+    
+    <section class="section-inspire">
+      <button onclick="changeTextAndColor()">Inspire me!</button>  
+      <p id="demo">Click the button to get an inspirational quote!</p>  
+    </section>
+  </main>
+
+  <script src="script.js"></script>  
   
-  .navbar {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .navbar ul li {
-    margin-left: 15px;
-  }
-  
-  .navbar ul li a:hover {
-    color: #ddd;
-  }
-  
-  .section-home {
-    background-color: #f8f9fa;
-    padding: 20px;
-  }
-  
-  .section-inspire {
-    background-color: #e9ecef;
-    padding: 20px;
-  }
-  
+</body>  
+</html>
