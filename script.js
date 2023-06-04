@@ -14,3 +14,13 @@ function changeTextAndColor() {
     document.body.style.backgroundColor = randomColor;
     document.getElementById('demo').innerText = randomQuote;
   }
+let model;
+async function loadModel() {
+    model = await tf.loadLayersModel('model/model.json');
+}
+loadModel();
+async function makePrediction(inputData) {
+    const prediction = model.predict(inputData);
+    // Do something with the prediction
+}
+
