@@ -23,11 +23,23 @@
       </ul>
     </nav>
   </header>
+  
+  <form id="prediction-form">
+  <label for="bedrooms">Number of Bedrooms:</label>
+  <input type="number" id="bedrooms" name="bedrooms" required><br>
+  <label for="size">Size (in square feet):</label>
+  <input type="number" id="size" name="size" required><br>
+  <input type="submit" value="Predict Price">
+</form>
+
+<p id="prediction"></p>
+
 
   <main>
     <section class="section-home">
       <h1>Michael Ayobami Omoyele Adams</h1>  
     </section>
+   
     
     <section class="section-inspire">
       <button onclick="changeTextAndColor()">Inspire me!</button>  
