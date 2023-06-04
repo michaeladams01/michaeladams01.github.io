@@ -14,13 +14,26 @@ function changeTextAndColor() {
     document.body.style.backgroundColor = randomColor;
     document.getElementById('demo').innerText = randomQuote;
   }
+
 let model;
 async function loadModel() {
     model = await tf.loadLayersModel('model/model.json');
 }
 loadModel();
-async function makePrediction(inputData) {
-    const prediction = model.predict(inputData);
-    // Do something with the prediction
+
+// Assume you have inputs for number of bedrooms and size in square feet
+let numberOfBedrooms = 3;
+let sizeInSquareFeet = 2000;
+
+// TensorFlow.js expects a 2D array as input, so we need to reshape our inputs
+let inputTensor = tf.tensor2d([numberOfBedrooms, sizeInSquareFeet], [1, 2]);
+
+async function makePrediction(inputTensor) {
+    const prediction = model.predict(inputTensor);
+    let predictedPrice = prediction.dataSync()[0];
+    console.log(`The predicted price for a ${numberOfBedrooms} bedroom house with a size of ${sizeInSquareFeet} square feet is ${predictedPrice}`);
 }
+
+makePrediction(inputTensor);
+
 
