@@ -13,4 +13,5 @@ function changeTextAndColor() {
   
     document.body.style.backgroundColor = randomColor;
     document.getElementById('demo').innerText = randomQuote;
+  }
  
