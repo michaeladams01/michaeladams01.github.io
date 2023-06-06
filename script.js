@@ -17,4 +17,12 @@ function changeTextAndColor() {
   
     document.body.style.backgroundColor = randomColor;
     document.getElementById('demo').innerText = randomQuote;
+
+    
   }
+  document.getElementById('modeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+  });
+  
+  
