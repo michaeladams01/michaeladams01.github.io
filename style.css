@@ -1,8 +1,56 @@
 body {
-    font-family: 'Arial', sans-serif;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    background-size: 200% 200%;
+    background-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+    animation: gradient 15s ease infinite;
+    font-family: Arial, sans-serif;
+    color: #333;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #0066cc;
+  }
+  
+  a:hover {
+    color: #004499;
+  }
+  
+  .button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button:hover {
+    background-color: #004499;
+  }
+  
+
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
   
   .navbar {
     background-color: #007BFF;
@@ -42,3 +90,12 @@ body {
     padding: 20px;
   }
   
+  .section-home {
+    animation: animateElement 2s infinite;
+  }
+  
+  @keyframes animateElement {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+  }
