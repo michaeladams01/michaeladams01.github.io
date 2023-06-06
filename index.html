@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Michael Ayobami Omoyele Adams - Personal Page</title>  
   <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>  
 
 <body>  
@@ -19,6 +22,8 @@
       </ul>
     </nav>
   </header>
+  
+  
 
   <main>
     <section class="section-home">
@@ -26,12 +31,17 @@
     </section>
     
     <section class="section-inspire">
-      <button onclick="changeTextAndColor()">Inspire me!</button>  
-      <p id="demo">Click the button to get an inspirational quote!</p>  
+      <button onclick="changeTextAndColor()">Inspire me!</button>
+        
+      <p id="demo">Click the button to get an inspirational quote!</p> 
+       
     </section>
   </main>
 
   <script src="script.js"></script>  
+  <script>
+    AOS.init();
+  </script>
   
 </body>  
 </html>
