@@ -10,7 +10,7 @@ body {
 
 .parallax {
   /* The image used */
-  background-image: url("https://pixabay.com/photos/cobweb-ear-of-grass-spider-web-8025639/");
+  background-image: url("cobweb.jpg");
 
   /* Set a specific height */
   min-height: 500px; 
