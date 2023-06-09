@@ -2,25 +2,11 @@ body {
     height: 100vh;
     margin: 0;
     background-size: 200% 200%;
-    
+    background-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
     animation: gradient 15s ease infinite;
     font-family: Arial, sans-serif;
     color: #333;
   }
-
-.parallax {
-  /* The image used */
-  background-image: url("cobweb.jpg");
-
-  /* Set a specific height */
-  min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 
   h1, h2, h3, h4, h5, h6 {
