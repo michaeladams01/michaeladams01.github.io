@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fireworks with particles.js</title>
+    <style>
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        #message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5em;
+            font-family: 'Arial', sans-serif;
+            color: #ff0000;
+            text-align: center;
+            display: none;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        #launch {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="launch" onclick="launchFireworks()">Click Me</button>
+    <div id="particles-js"></div>
+    <div id="message">You're the best, darling!</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="fireworks.js"></script>
+</body>
+</html>
+
+
