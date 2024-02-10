@@ -1,42 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Fireworks with particles.js</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
     <style>
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffccd5;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            margin-top: 50px;
+            color: #ff4d6d;
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        #yes-button {
+            background-color: #ff4d6d;
+            color: white;
+            padding: 20px 40px;
+            font-size: 24px;
+            border: none;
+            border-radius: 8px;
+            margin: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #yes-button:hover {
+            background-color: #ff3b5b;
+        }
+        #no-button {
+            background-color: #ff4d6d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            margin: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #no-button:hover {
+            background-color: #ff3b5b;
+        }
+        #no-button.tiny {
+            font-size: 1px;
+            padding: 1px 2px;
         }
         #message {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 5em;
-            font-family: 'Arial', sans-serif;
-            color: #ff0000;
-            text-align: center;
             display: none;
-            text-shadow: 2px 2px 4px #000000;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffdde2;
+            border-radius: 8px;
+            animation: fade 1s ease-in-out forwards;
         }
-        #launch {
+
+        @keyframes fade {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .firework {
             position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            z-index: 100;
+            pointer-events: none;
+            animation: fireworks 1s ease-out forwards;
+        }
+
+        @keyframes fireworks {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(10);
+                opacity: 0;
+            }
+        }
+
+        .spark {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #ff4d6d;
+            border-radius: 50%;
+            z-index: 101;
+            pointer-events: none;
+            animation: sparks 5s ease-out forwards;
+        }
+
+        @keyframes sparks {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
         }
     </style>
 </head>
 <body>
-    <button id="launch" onclick="launchFireworks()">Click Me</button>
-    <div id="particles-js"></div>
-    <div id="message">You're the best, darling!</div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="fireworks.js"></script>
+<h1>Will You Be My Valentine?</h1>
+
+<button id="yes-button" onclick="displayMessage()">Yes</button>
+<button id="no-button" onclick="convince()">No</button>
+
+<div id="message">
+    <p>You make every moment special, and I am grateful for your love. Happy Valentine's Day, my dear!</p>
+</div>
+
+<script>
+    function displayMessage() {
+        var message = document.getElementById("message");
+        message.style.display = "block";
+
+        // Create fireworks
+        var container = document.body;
+        for (var i = 0; i < 30; i++) {
+            var firework = document.createElement("div");
+            firework.classList.add("firework");
+            firework.style.left = Math.random() * window.innerWidth + "px";
+            firework.style.top = Math.random() * window.innerHeight + "px";
+            container.appendChild(firework);
+
+            var spark = document.createElement("div");
+            spark.classList.add("spark");
+            spark.style.left = Math.random() * 20 - 10 + "px";
+            spark.style.top = Math.random() * 20 - 10 + "px";
+            firework.appendChild(spark);
+        }
+    }
+
+    function convince() {
+        alert("Are you sure? Think about it again!");
+    }
+
+    function makeTiny() {
+        var noButton = document.getElementById("no-button");
+        noButton.classList.add("tiny");
+        noButton.disabled = true;
+    }
+</script>
+
 </body>
 </html>
-
-
